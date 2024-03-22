@@ -633,17 +633,31 @@
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/custom.js"></script>
         <script type="module" src="js/web-vitals.js"></script>
+<!--        <script>-->
+<!--            if ('serviceWorker' in navigator) {-->
+<!--                window.addEventListener('load', function() {-->
+<!--                    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {-->
+<!--                        console.log('ServiceWorker registration successful with scope: ', registration.scope);-->
+<!--                    }, function(err) {-->
+<!--                        console.error('ServiceWorker registration failed: ', err);-->
+<!--                    });-->
+<!--                });-->
+<!--            }-->
+<!--        </script>-->
         <script>
             if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    }, function(err) {
-                        console.error('ServiceWorker registration failed: ', err);
-                    });
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('Service Worker registered:', registration);
+                        })
+                        .catch(error => {
+                            console.error('Service Worker registration failed:', error);
+                        });
                 });
             }
         </script>
+
         <div class="geolocation-container">
             <!-- Script for geolocation detection -->
             <script src="js/geolocation.js"></script>
