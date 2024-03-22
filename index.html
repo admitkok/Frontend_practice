@@ -21,13 +21,16 @@
 
         <link href="css/tooplate-crispy-kitchen.css" rel="stylesheet">
 
-<!--
+        <link rel="manifest" href="/manifest.json">
 
-Tooplate 2129 Crispy Kitchen
 
-https://www.tooplate.com/view/2129-crispy-kitchen
+        <!--
 
--->
+        Tooplate 2129 Crispy Kitchen
+
+        https://www.tooplate.com/view/2129-crispy-kitchen
+
+        -->
     </head>
 
     <body>
@@ -193,7 +196,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                 </div>
 
                 <div class="video-wrap">
-                    <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                    <video loading="lazy" autoplay="" loop="" muted="" class="custom-video" poster="">
                         <source src="video/production_ID_3769033.mp4" type="video/mp4">
                         	Your browser does not support the video tag.
                     	</video>
@@ -629,7 +632,29 @@ https://www.tooplate.com/view/2129-crispy-kitchen
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/custom.js"></script>
-        <script type="module" src="js/metrics.js"></script>
+        <script type="module" src="js/web-vitals.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                        console.error('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }
+        </script>
+        <div class="geolocation-container">
+            <!-- Script for geolocation detection -->
+            <script src="js/geolocation.js"></script>
+        </div>
+        <div class="online-status-container">
+            <script src="js/online.js"></script>
+        </div>
+
+        <div class="push-notification">
+            <script src="js/push-notification.js"></script>
+        </div>
 
     </body>
 </html>

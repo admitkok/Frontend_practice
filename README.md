@@ -10,6 +10,6 @@
 3. Added bundler
 4. Added bundle analyse (https://www.npmjs.com/package/vite-bundle-visualizer )
 5. Added Lighthouse to build step (https://github.com/GoogleChrome/lighthouse#using-the-node-cli )
-6. Added https://www.npmjs.com/package/web-vitals pkg (send metrics https://httpbin.org/status/200)
 7. Apply changes, see the result improvements
-- Lighthouse: 90/100
+- Lighthouse: 90+/100 (max score: 98)
+8. Deployed to Github

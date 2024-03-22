@@ -376,6 +376,40 @@ strong {
   color: var(--white-color);
 }
 
+/* Style for the geolocation detection container */
+.geolocation-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.online-status-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.push-notification {
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  background-color: #007bff; /* Blue color */
+  color: #fff; /* White text color */
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9999; /* Ensure the notification is on top of other elements */
+}
+
 .price-tag {
   background: var(--white-color);
   border-radius: 100px;
@@ -692,6 +726,7 @@ strong {
   background-attachment: fixed;
   height: 500px;
 }
+
 
 
 /*---------------------------------------
