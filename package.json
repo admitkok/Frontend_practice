@@ -9,15 +9,17 @@
   },
   "dependencies": {
     "cssnano": "^6.1.1",
+    "localhost": "^0.4.1",
+    "mkcert": "^3.2.0",
     "rollup-plugin-terser": "^7.0.2",
     "vite": "^5.2.2",
     "web-vitals": "^3.5.2"
   },
   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "dev": "vite",
-      "build": "vite build",
-      "preview": "vite preview",
-      "lighthouse": "lighthouse http://localhost:5173 --view"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lighthouse": "lighthouse http://localhost:5173 --view"
   }
 }
