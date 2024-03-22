@@ -1,13 +1,20 @@
+// Function to display push notification
 function displayPushNotification() {
-    const pushNotification = document.getElementById('pushNotification');
-    pushNotification.textContent = "Friday specials until 14:00";
+    // Create a message for the push notification
+    const message = "Friday specials until 14:00";
 
-    // Show the push notification
-    pushNotification.style.display = 'block';
+    // Get the container element
+    const pushNotificationContainer = document.getElementById('pushNotificationContainer');
 
-    // Hide the push notification after 5 seconds
+    // Update the text content of the container with the message
+    pushNotificationContainer.textContent = message;
+
+    // Show the push notification container
+    pushNotificationContainer.style.display = 'block';
+
+    // Hide the push notification container after 5 seconds
     setTimeout(() => {
-        pushNotification.style.display = 'none';
+        pushNotificationContainer.style.display = 'none';
     }, 5000); // Adjust duration as needed (5 seconds in this example)
 }
 

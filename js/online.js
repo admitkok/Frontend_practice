@@ -1,11 +1,14 @@
 // Function to handle online status change
 function handleOnlineStatus() {
+    // Get the container element
+    const onlineStatusContainer = document.getElementById('onlineStatusContainer');
+
     if (navigator.onLine) {
         // Online
-        console.log("You are now online.");
+        onlineStatusContainer.textContent = "You are now online.";
     } else {
         // Offline
-        console.log("You are now offline.");
+        onlineStatusContainer.textContent = "You are now offline.";
     }
 }
 
@@ -15,3 +18,4 @@ handleOnlineStatus();
 // Add event listeners for online and offline events
 window.addEventListener('online', handleOnlineStatus);
 window.addEventListener('offline', handleOnlineStatus);
+

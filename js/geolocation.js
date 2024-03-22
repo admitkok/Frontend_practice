@@ -5,10 +5,26 @@ if ("geolocation" in navigator) {
 }
 
 function successCallback(position) {
+    // Extract latitude and longitude from the position object
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    console.log("Latitude: " + latitude + ", Longitude: " + longitude);
-    // Do something with the latitude and longitude data
+
+    // Create a message string with latitude and longitude
+    const message = "Latitude: " + latitude + ", Longitude: " + longitude;
+
+    // Get the container element
+    const locationContainer = document.getElementById('locationContainer');
+
+    // Update the text content of the container with the message
+    locationContainer.textContent = message;
+
+    // You can also use innerHTML if you want to add HTML content
+    // locationContainer.innerHTML = message;
+
+    // Optionally, you can style the container or perform additional actions here
+
+    // Do something with the latitude and longitude data if needed
+    // For example, you can send it to a server, display it on a map, etc.
 }
 
 function errorCallback(error) {
