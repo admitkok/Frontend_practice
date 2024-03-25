@@ -8,10 +8,16 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "cssnano": "^6.1.1",
+    "etag": "^1.8.1",
+    "express": "^4.19.1",
+    "lighthouse": "^11.7.0",
     "localhost": "^0.4.1",
     "mkcert": "^3.2.0",
+    "pm2": "^5.3.1",
     "rollup-plugin-terser": "^7.0.2",
+    "uuid": "^9.0.1",
     "vite": "^5.2.2",
     "web-vitals": "^3.5.2"
   },
@@ -21,5 +27,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "lighthouse": "lighthouse http://localhost:5173 --view"
-  }
+  },
+  "name": "frontend_practice",
+  "description": "## Done: ### Images and media optimisation 1. Clone, run Lighthouse add README.md, to capture fixes done for steps 1-3 - Lighthouse: 86/100 3. Allocate problematic resources (FONTS/CSS/IMGS/VIDEO) - added lazy loading for images - applied css and js minification 3. Added bundler 4. Added bundle analyse (https://www.npmjs.com/package/vite-bundle-visualizer ) 5. Added Lighthouse to build step (https://github.com/GoogleChrome/lighthouse#using-the-node-cli ) 7. Apply changes, see the result improvements - Lighthouse: 90+/100 (max score: 98) 8. Deployed to Github",
+  "version": "1.0.0",
+  "main": "webperf-practice-2/extractor.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
