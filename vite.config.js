@@ -20,7 +20,7 @@ export default defineConfig({
             transformIndexHtml(html) {
                 return html.replace(
                     '</body>',
-                    '<script src="../Frontend_practice/js/metrics.js"></script></body>'
+                    '<script src="webperf-practice-2/js/metrics.js"></script></body>'
                 );
             },
         },
