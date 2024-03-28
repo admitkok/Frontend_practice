@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Script from "next/script";
 
 const items = [
   {
@@ -48,7 +49,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <Link className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/public">
           {" "}
           Crispy Kitchen{" "}
         </Link>
@@ -92,6 +93,18 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      <Script id="foo">
+        {`
+          document.onload = function () {
+            (function ($) {
+              $(".navbar-nav .nav-link").click(function () {
+                $(".navbar-collapse").collapse("hide");
+              });
+            })(window.jQuery);
+          };
+        `}
+      </Script>
     </nav>
   );
 }
