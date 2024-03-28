@@ -18,6 +18,10 @@ const items = [
     href: "/menu",
   },
   {
+    title: "Cocktails",
+    href: "/cocktails",
+  },
+  {
     title: "Our Updates",
     href: "/news",
   },
