@@ -53,8 +53,9 @@ const CocktailMenu: React.FC = () => {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Search cocktails..."
+                    style={{width: "500px", height: "50px", border: "1px solid #000", borderRadius: "5px", padding: "10px"}}
                 />
-                <button onClick={handleSearch}>Search</button>
+                <button onClick={handleSearch} style={{border: "none", borderRadius: "5px", backgroundColor: "black", color: "white"}}>Search</button>
             </div>
             <div style={{ height: '100%', width: '100%', marginTop:"20px", marginBottom: "20px", display:"flex", flexDirection: "column", justifyContent:"center"}}>
                 {loading ? (
