@@ -59,7 +59,7 @@ const CocktailMenu: React.FC = () => {
             </div>
             <div style={{ height: '100%', width: '100%', marginTop:"20px", marginBottom: "20px", display:"flex", flexDirection: "column", justifyContent:"center"}}>
                 {loading ? (
-                    <Skeleton />
+                    <Skeleton style={{width: "100%", height: "420px"}}/>
                 ) : (
                     cocktails.length === 0 ? (
                         <h1>No cocktails found</h1>
